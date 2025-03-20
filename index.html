@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucks2Bar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: 1.5rem;">Bucks2Bar</a>
+        </div>
+    </nav>
+    <div class="container mt-3">
+        <input type="text" id="username" class="form-control" placeholder="Enter your username">
+        <h1>Welcome to Bucks2Bar</h1>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="data-tab" data-bs-toggle="tab" data-bs-target="#data" type="button" role="tab" aria-controls="data" aria-selected="true">Data</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button" role="tab" aria-controls="chart" aria-selected="false">Chart</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="data" role="tabpanel" aria-labelledby="data-tab">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h2>January</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="jan-income-label">Income</span>
+                                    <input type="text" id="jan-income" class="form-control" aria-label="Income" aria-describedby="jan-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="jan-expenses-label">Expenses</span>
+                                    <input type="text" id="jan-expenses" class="form-control" aria-label="Expenses" aria-describedby="jan-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>February</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="feb-income-label">Income</span>
+                                    <input type="text" id="feb-income" class="form-control" aria-label="Income" aria-describedby="feb-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="feb-expenses-label">Expenses</span>
+                                    <input type="text" id="feb-expenses" class="form-control" aria-label="Expenses" aria-describedby="feb-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>March</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="mar-income-label">Income</span>
+                                    <input type="text" id="mar-income" class="form-control" aria-label="Income" aria-describedby="mar-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="mar-expenses-label">Expenses</span>
+                                    <input type="text" id="mar-expenses" class="form-control" aria-label="Expenses" aria-describedby="mar-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>April</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="apr-income-label">Income</span>
+                                    <input type="text" id="apr-income" class="form-control" aria-label="Income" aria-describedby="apr-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="apr-expenses-label">Expenses</span>
+                                    <input type="text" id="apr-expenses" class="form-control" aria-label="Expenses" aria-describedby="apr-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>May</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="may-income-label">Income</span>
+                                    <input type="text" id="may-income" class="form-control" aria-label="Income" aria-describedby="may-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="may-expenses-label">Expenses</span>
+                                    <input type="text" id="may-expenses" class="form-control" aria-label="Expenses" aria-describedby="may-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>June</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="jun-income-label">Income</span>
+                                    <input type="text" id="jun-income" class="form-control" aria-label="Income" aria-describedby="jun-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="jun-expenses-label">Expenses</span>
+                                    <input type="text" id="jun-expenses" class="form-control" aria-label="Expenses" aria-describedby="jun-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>July</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="jul-income-label">Income</span>
+                                    <input type="text" id="jul-income" class="form-control" aria-label="Income" aria-describedby="jul-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="jul-expenses-label">Expenses</span>
+                                    <input type="text" id="jul-expenses" class="form-control" aria-label="Expenses" aria-describedby="jul-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>August</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="aug-income-label">Income</span>
+                                    <input type="text" id="aug-income" class="form-control" aria-label="Income" aria-describedby="aug-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="aug-expenses-label">Expenses</span>
+                                    <input type="text" id="aug-expenses" class="form-control" aria-label="Expenses" aria-describedby="aug-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>September</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="sep-income-label">Income</span>
+                                    <input type="text" id="sep-income" class="form-control" aria-label="Income" aria-describedby="sep-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="sep-expenses-label">Expenses</span>
+                                    <input type="text" id="sep-expenses" class="form-control" aria-label="Expenses" aria-describedby="sep-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>October</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="oct-income-label">Income</span>
+                                    <input type="text" id="oct-income" class="form-control" aria-label="Income" aria-describedby="oct-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="oct-expenses-label">Expenses</span>
+                                    <input type="text" id="oct-expenses" class="form-control" aria-label="Expenses" aria-describedby="oct-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>November</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="nov-income-label">Income</span>
+                                    <input type="text" id="nov-income" class="form-control" aria-label="Income" aria-describedby="nov-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="nov-expenses-label">Expenses</span>
+                                    <input type="text" id="nov-expenses" class="form-control" aria-label="Expenses" aria-describedby="nov-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>December</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="dec-income-label">Income</span>
+                                    <input type="text" id="dec-income" class="form-control" aria-label="Income" aria-describedby="dec-income-label">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="dec-expenses-label">Expenses</span>
+                                    <input type="text" id="dec-expenses" class="form-control" aria-label="Expenses" aria-describedby="dec-expenses-label">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="chart" role="tabpanel" aria-labelledby="chart-tab">
+                <canvas id="incomeExpensesChart"></canvas>
+                <!-- Bootstrap button with a label "Download" -->
+                <button id="download" class="btn btn-primary mt-3">Download</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
