@@ -1,4 +1,46 @@
 document.addEventListener('DOMContentLoaded', function () {
+    ///////////////////////////////email///////////////////////////////////
+    document.getElementById('send-email').addEventListener('click', function () {
+        const emailInput = document.getElementById('email').value;
+        if (!emailInput) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        if (!incomeExpensesChart) {
+            alert('The chart is not available.');
+            return;
+        }
+
+        const chartImage = incomeExpensesChart.toBase64Image();
+
+        fetch('http://localhost:3000/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: emailInput,
+                image: chartImage
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Email sent successfully!');
+                } else {
+                    alert('Failed to send email. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while sending the email.');
+            });
+    });
+
+    //////////////////////////////email//////////////////////////////////
+
+    //////////////////////////////username///////////////////////////////////
     const usernameInput = document.getElementById('username');
 
     usernameInput.addEventListener('input', function () {
@@ -22,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,}$/;
         return regex.test(username);
     }
+    //////////////////////////////username///////////////////////////////////
 
     const ctx = document.getElementById('incomeExpensesChart').getContext('2d');
     let incomeExpensesChart;
@@ -74,10 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('chart-tab').addEventListener('shown.bs.tab', updateChart);
 
+    //////////////////////////////download chart image///////////////////////////////////
     document.getElementById('download').addEventListener('click', function () {
         const link = document.createElement('a');
         link.href = incomeExpensesChart.toBase64Image();
         link.download = 'income-expenses-chart.png';
         link.click();
     });
+    //////////////////////////////download chart image///////////////////////////////////
 });

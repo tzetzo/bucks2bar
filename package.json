@@ -4,6 +4,7 @@
   "description": "## Overview The \"bucks2bar\" project is a web application that utilizes Bootstrap for responsive design and custom styles to enhance user experience. This project aims to provide a seamless interface for users.",
   "main": "index.js",
   "scripts": {
+    "server": "node server",
     "test": "jest"
   },
   "author": "",
@@ -11,5 +12,13 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "nodemailer": "^6.10.0",
+    "resend": "^4.1.2"
   }
 }
